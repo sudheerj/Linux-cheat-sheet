@@ -39,7 +39,7 @@
    $ pwd
    /home/sj/Desktop/Linux
    ```
-2. **mkdir** The mkdir command allows users to create directories or folders.
+2. **mkdir** The mkdir(make directory) command allows users to create directories or folders.
    ```bash
    $ mkdir ubuntu
    $ ls
@@ -50,4 +50,9 @@
    $ mkdir -p dir1/dir2/dir3
    $ cd dir1/dir2/dir3
    ~/Desktop/Linux/dir1/dir2/dir3$
+   ```
+3. **rm**: The rm(remove) command is used to  remove objects such as files, directories, symbolic links etc from the file system.
+   1. Remove file: The rm command is used to remove or delete a file
+   ```bash
+   rm file_name
    ```
