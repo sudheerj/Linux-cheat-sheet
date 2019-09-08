@@ -33,3 +33,21 @@
    $ id
 
    ```
+### File and directory commands
+1. **pwd** The pwd(Present Working Directory) command is used to print the name of the present/current working directory starting from the root.
+   ```bash
+   $ pwd
+   /home/sj/Desktop/Linux
+   ```
+2. **mkdir** The mkdir command allows users to create directories or folders.
+   ```bash
+   $ mkdir ubuntu
+   $ ls
+   ubuntu
+   ```
+   The option '-p' is used to create multiple directories or parent directories at once.
+   ```bash
+   $ mkdir -p dir1/dir2/dir3
+   $ cd dir1/dir2/dir3
+   ~/Desktop/Linux/dir1/dir2/dir3$
+   ```
