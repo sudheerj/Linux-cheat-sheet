@@ -56,3 +56,15 @@
    ```bash
    rm file_name
    ```
+   2. Remove file forcefully: The rm command with -f option is used for removal of file without prompting for confirmation.
+   ```bash
+   rm -f filename
+   ```
+   3. Remove directory: The rm command with -r option is used to remove the directory and its contents recursively.
+   ```bash
+   rm -r myDir
+   ```
+   4. Remove directory forcefully: The rm command with -rf option is used to forcefully remove directory recursively.
+   ```bash
+   rm -rf myDir
+   ```
