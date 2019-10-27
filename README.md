@@ -68,3 +68,20 @@
    ```bash
    rm -rf myDir
    ```
+4. **touch**: The touch command is is used to create, change and modify timestamps of a file without any content.
+   1. Create a new file: You can create a single file at a time using touch command. The file created is an empty file.
+   ```bash
+   touch file_name
+   ```
+   2. Create multiple files: You can create the multiple numbers of files at the same time.
+   ```bash
+   touch file1_name file2_name file3_name
+   ```
+   3. Change access time: The touch command with `a` option is used to change the access time of a file.
+   ```bash
+   touch -a file_name
+   ```
+   4. Change modification time: The touch command with `m` option is used to change the modified time.
+   ```bash
+touch -m file_namez
+   ```
