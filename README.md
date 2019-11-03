@@ -94,3 +94,4 @@
    ```bash
    touch -t 1911010000 file_name
    ```
+5. **cat**: The cat command is used to create single or multiple files, view contain of file, concatenate files and redirect output in terminal or files.
