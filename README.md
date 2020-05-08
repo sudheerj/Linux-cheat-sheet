@@ -3,17 +3,19 @@
 > Click :star:if you like the project. Pull Request are highly appreciated. Follow me [@SudheerJonna](https://twitter.com/SudheerJonna) for technical updates.
 
 ### Table of Contents
-
-* [**User information**](#user-information)
-* [**File and directory commands**](#file-and-directory-commands)
-* [**File permissions**](#file-permissions)
-* [**Networking**](#networking)
-* [**Installing packages**](#installing-packages)
-* [**Disk usage**](#disk-usage)
-* [**System and Hardware information**](#system-and-hardware-information)
-* [**Search Files**](#search-files)
-* [**SSH**](#ssh)
-* [**Vi/Vim-commands**](#vi/vim-commands)
+-------------------------------------------------------------------
+| No. | Topic |
+|---- | ---------
+|1  | [**User information**](#user-information) |
+|2  | [**File and directory commands**](#file-and-directory-commands) |
+|3  | [**File permissions**](#file-permissions) |
+|4  | [**Networking**](#networking) |
+|5  | [**Installing packages**](#installing-packages) |
+|6  | [**Disk usage**](#disk-usage) |
+|7  | [**System and Hardware information**](#system-and-hardware-information) |
+|8  | [**Search Files**](#search-files) |
+|9  | [**SSH**](#ssh)
+|10 | [**Vi/Vim-commands**](#vi/vim-commands) |
 
 
 ### User Information
@@ -33,6 +35,9 @@
    $ id
 
    ```
+
+   **[⬆ Back to Top](#table-of-contents)**
+
 ### File and directory commands
 1. **pwd** The pwd(Present Working Directory) command is used to print the name of the present/current working directory starting from the root.
    ```bash
@@ -95,3 +100,10 @@
    touch -t 1911010000 file_name
    ```
 5. **cat**: The cat command is used to create single or multiple files, view contain of file, concatenate files and redirect output in terminal or files.
+   1. View file contents: You can view contents of a single or more files by mentioning the filenames.
+   ```bash
+   cat file_name1 file_name2
+   ```
+   2.
+
+   **[⬆ Back to Top](#table-of-contents)**
