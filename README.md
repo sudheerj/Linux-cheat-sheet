@@ -107,3 +107,86 @@
    2.
 
    **[⬆ Back to Top](#table-of-contents)**
+
+### File permissions
+
+   **[⬆ Back to Top](#table-of-contents)**
+
+### Networking
+
+   **[⬆ Back to Top](#table-of-contents)**
+
+### Installing packages
+
+   **[⬆ Back to Top](#table-of-contents)**
+
+### Disk usage
+
+   **[⬆ Back to Top](#table-of-contents)**
+
+### System and Hardware information
+
+   **[⬆ Back to Top](#table-of-contents)**
+
+### Search Files
+
+   **[⬆ Back to Top](#table-of-contents)**
+
+### SSH
+
+   **[⬆ Back to Top](#table-of-contents)**
+
+### Vi/Vim-commands
+
+   Vi editor is the most popular text editor from the early days of Unix. Whereas Vim(Vi IMproved) is an improved version of vi editor to be used in CLI (command line interface) for mainly text editing tasks in many configuration files. Some of the other alternatives are Elvis, Nvi, Nano, Joe, and Vile.
+   It has two main operation modes,
+
+   1. **Command Mode:** It allows the entry of commands to manipulate text.
+   2. **Entry mode(Or Insert mode):** It allows typed characters on the keyboard into the current file.
+
+#### 1. Start with Vi Editor
+
+   You can create a new file or open an existing file using `vi filename` command.
+   ```cmd
+    vi <filename_NEW> or <filename_EXISTING> // Create a new file or open an existing file
+
+    Example:
+    vi first.txt
+   ```
+   Let's see how do you create file, entre the content and leave the CLI by saving the changes.
+   1. Create a new file named `first.txt`
+   2. Press `i` to enter the insert mode
+   3. Enter the text "Hello World!"
+   4. Save the text and exit by pressing `:wq!` command
+   5. Check the entered text
+
+#### 2. Cursor movement
+    These commands will be used in Command mode.
+
+##### Move cursor
+   You can use arrow keys(left, right, up and down) to move the cursor on the terminal. But you can also other keys for this behavior.
+   ```cmd
+    h        # Move left
+    j        # Move down
+    k        # Move up
+    l        # Move right
+   ```
+##### Jump one word
+   These commands used to jump one word at a time
+   ```cmd
+   w        # Jump forwards to the start of a word
+   W        # Jump forwards to the start of a WORD
+   e        # Jump forwards to the start of a word
+   E        # Jump forwards to the start of a WORD
+   b        # Jump backwords to the start of a word
+   B        # Jump backwords to the start of a WORD
+   ```
+
+##### Move to start or end of a line
+   These commands used to move starting or ending of a line.
+   ```cmd
+   ^        # Jump to the start of a current line
+   $        # Jump to the end of a current line
+   ```
+
+   **[⬆ Back to Top](#table-of-contents)**
