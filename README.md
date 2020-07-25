@@ -134,6 +134,29 @@
 
 ### SSH
 
+   SSH (Secure Shell) is a network protocol that enables secure remote connections between two systems.
+
+   1. **Connect remote machine using IP address or machine name:** The remote server can be connected with local user name using either host name or IP address
+
+   ```cmd
+   ssh <host-name> or <ip-address>
+
+   Example:
+   ssh 192.111.66.100
+   ssh test.remoteserver.com
+   ```
+
+   2. **Connect remote machine using username:** It is also possible specify a user for an SSH connection.
+
+   ```cmd
+   ssh username@hostname_or_ip-address
+
+   Example:
+   ssh john@192.0.0.22
+   ssh john@test.remoteserver.com
+   ```
+
+
    **[⬆ Back to Top](#table-of-contents)**
 
 ### Vi/Vim-commands
@@ -182,11 +205,65 @@
    B        # Jump backwords to the start of a WORD
    ```
 
-##### Move to start or end of a line
-   These commands used to move starting or ending of a line.
+##### Jump to start or end of a line or next line
+   These commands used to jump starting or ending of a line or a next line.
    ```cmd
    ^        # Jump to the start of a current line
    $        # Jump to the end of a current line
+   return   # Jump to the start of a next line
    ```
+##### Move sides
+   These commands used to moves all sides of the screen
+   ```cmd
+   Backspace # Move cursor one character to the left
+   Spacebar  # Move cursor one character to the right
+   H(High)   # Move cursor to the top of the screen
+   M(Middle) # Move cursor to the middle of the screen
+   L(Low)    # Move cursor to the bottom of the screen
+   ```
+
+##### Paging and Scrolling
+   Paging is used to moves the cursor up or down through the text a full screen at a time. Whereas Scrolling happens line by line.
+   ```cmd
+   Ctrl + f     # move forward one full screen
+   Ctrl + b     # move backward one full screen
+   Ctrl + d     # move forward half a screen
+   Ctrl + u     # move backward half a screen
+   ```
+
+##### Inserting Text
+   These commands places vi in entry mode from command mode. First, you need to be in command mode to use the below commands.
+###### Insert
+   ```cmd
+   i    # Insert text to the left of the cursor
+   I    # Insert text at the beginning of a line
+   ESC  # Exit insert mode
+   ```
+###### Append
+   ```cmd
+   a    # Insert(or Append) text to the right of the cursor
+   A    # Insert(or Append) text at the end of a line
+   ```
+###### Open a line
+   ```cmd
+   o    # Open a line below the current cursor position
+   O    # open a line above the current cursor position
+   ```
+##### Editing Text
+
+##### Deleting Text
+
+##### Cut, Copy & Paste
+
+##### Exiting
+    These commands are used to exit from the file.
+    ```cmd
+    :w	    # Write (save) the file, but don't exit
+    :wq	    # Write (save) and quit
+    :wq!	# Force write (save) and quit
+    :q	    # Quit, but it fails if anything has changed
+    :q!	    # Quit and throw away for any changes
+    ```
+
 
    **[⬆ Back to Top](#table-of-contents)**
