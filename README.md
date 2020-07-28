@@ -156,6 +156,56 @@
    ssh john@test.remoteserver.com
    ```
 
+   3. **:Connect remote machine using custom port** By default, the SSH server listens for a connection on port 22. But you can also specify the custom port.
+
+   ```cmd
+   ssh <host-name> or <ip-address> -p port_number
+
+   Example:
+   ssh test.remoteserver.com -p 3322
+   ```
+
+   4. **Generate SSH keys using keygen:** SSH Keygen is used to generate a key pair which consists of public and private keys to improve the security of SSH connections.
+
+   ```cmd
+   ssh-keygen -t rsa
+   ```
+
+   5. **Copying SSH keys to servers:** For SSH authentication, `ssh-copy-id` command will be used to copy public key(id_rsa.pub) to server.
+
+   ```cmd
+   ssh-copy-id hostname_or_IP
+   ```
+
+   6. **Copy a File Remotely over SSH:** SCP tool is used to securely copy files over the SSH protocol.
+
+   ```cmd
+   scp fileName user@remotehost:destinationPath
+
+   Example:
+   scp test.txt test@10.0.0.64:/home/john/Desktop
+   ```
+
+   7. **Edit SSH Config File** SSH server options customized by editing the settings in `sshd_config` file.
+
+   ```cmd
+   sudo vim /etc/ssh/sshd_config
+   ```
+
+   8. **Run commands on a remote server** SSH commands can be executed on remote machine using the local machine.
+
+   ```cmd
+   ssh test.remoteserver.com mkdir NewDirectoryName // Creating directory on remote machine
+   ```
+
+   9. **Restart SSH service:** You need to restart the service in Linux after making changes to SSH configuration.
+
+   ```cmd
+   sudo ssh service restart
+   (or)
+   sudo sshd service restart
+   ```
+
 
    **[⬆ Back to Top](#table-of-contents)**
 
