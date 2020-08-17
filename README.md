@@ -123,7 +123,6 @@
    ```bash
    cat file_name1 file_name2
    ```
-   2.
 
    **[⬆ Back to Top](#table-of-contents)**
 
@@ -283,7 +282,7 @@
     Example:
     vi first.txt
    ```
-   Let's see how do you create file, entre the content and leave the CLI by saving the changes.
+   Let's see how do you create file, enter the content and leave the CLI by saving the changes.
    1. Create a new file named `first.txt`
    2. Press `i` to enter the insert mode
    3. Enter the text "Hello World!"
