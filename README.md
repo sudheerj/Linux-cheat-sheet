@@ -240,7 +240,7 @@ du  -ah --max-depth 2 /home/rak3sh
 du -ah --exclude="*.txt" /home/rak3sh
 ```
 
-8.  **Help:** This command gives information about du
+8.  **Help:** This command gives information about `du`
 
 ```cmd
 du  --help
