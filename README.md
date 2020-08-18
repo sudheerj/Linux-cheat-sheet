@@ -242,7 +242,7 @@ du -ah --exclude="*.txt" /home/rak3sh
 
 8.  **Help** This command gives information about du
 
-````cmd
+```cmd
 du  --help
 ```
 
@@ -254,7 +254,7 @@ du  --help
 
 ```bash
 $ uname -a
-````
+```
 
 2.  **Print kernel name**:
 
