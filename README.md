@@ -56,7 +56,26 @@
    $ cd dir1/dir2/dir3
    ~/Desktop/Linux/dir1/dir2/dir3$
    ```
-3. **rm**: The rm(remove) command is used to  remove objects such as files, directories, symbolic links etc from the file system.
+
+3. **rmdir**: The rmdir(remove directories) is used to remove *empty* directories. Can be used to delete multiple empty directories as well. Safer to use compared to `rm -r FolderName`. This command can also be forced to delete non-empty directories.
+   1. Remove empty directory:
+   ```bash
+   rmdir FolderName
+   ```
+   2. Remove multiple directories:
+   ```bash
+   rmdir FolderName1 FolderName2 FolderName3
+   ```
+   3. Remove non-empty directories:
+   ```bash
+   rmdir FolderName1 --ignore-fail-on-non-empty
+   ```
+   4. Remove entire directory tree. This command is similar to `rmdir a/b/c a/b a`:
+   ```bash
+   rmdir -p a/b/c
+   ```
+
+4. **rm**: The rm(remove) command is used to  remove objects such as files, directories, symbolic links etc from the file system.
    1. Remove file: The rm command is used to remove or delete a file
    ```bash
    rm file_name
@@ -73,7 +92,7 @@
    ```bash
    rm -rf myDir
    ```
-4. **touch**: The touch command is is used to create, change and modify timestamps of a file without any content.
+5. **touch**: The touch command is is used to create, change and modify timestamps of a file without any content.
    1. Create a new file: You can create a single file at a time using touch command. The file created is an empty file.
    ```bash
    touch file_name
@@ -99,12 +118,11 @@
    ```bash
    touch -t 1911010000 file_name
    ```
-5. **cat**: The cat command is used to create single or multiple files, view contain of file, concatenate files and redirect output in terminal or files.
+6. **cat**: The cat command is used to create single or multiple files, view contain of file, concatenate files and redirect output in terminal or files.
    1. View file contents: You can view contents of a single or more files by mentioning the filenames.
    ```bash
    cat file_name1 file_name2
    ```
-   2.
 
    **[⬆ Back to Top](#table-of-contents)**
 
@@ -163,6 +181,27 @@
    **[⬆ Back to Top](#table-of-contents)**
 
 ### System and Hardware information
+
+   1. **Print all information**: `uname` is mainly used to print system information.
+   ```bash
+   $ uname -a
+   ```
+   2. **Print kernel name**:
+   ```bash
+   $ uname -s
+   ```
+   3. **Print kernel release**:
+   ```bash
+   $ uname -r
+   ```
+   4. **Print Architecture**:
+   ```bash
+   $ uname -m
+   ```
+   5. **Print Operating System**:
+   ```bash
+   $ uname -o
+   ```
 
    **[⬆ Back to Top](#table-of-contents)**
 
@@ -264,7 +303,7 @@
     Example:
     vi first.txt
    ```
-   Let's see how do you create file, entre the content and leave the CLI by saving the changes.
+   Let's see how do you create file, enter the content and leave the CLI by saving the changes.
    1. Create a new file named `first.txt`
    2. Press `i` to enter the insert mode
    3. Enter the text "Hello World!"
