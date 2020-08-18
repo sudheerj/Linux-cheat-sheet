@@ -210,37 +210,37 @@ du [OPTION]... [FILE]...
 du  /home/rak3sh
 ```
 
-3.  **Disk usage in human readable format** To find out the disk usage in human readable format
+3.  **Disk usage in human readable format:** To find out the disk usage in human readable format
 
 ```cmd
 du  -h /home/rak3sh
 ```
 
-4.  **Total disk usage of a directory** To find out the total disk usage
+4.  **Total disk usage of a directory:** To find out the total disk usage
 
 ```cmd
 du  -sh /home/rak3sh
 ```
 
-5.  **Total disk usage of all files and directories** To find out the total disk usage of files and directories
+5.  **Total disk usage of all files and directories:** To find out the total disk usage of files and directories
 
 ```cmd
 du  -ah /home/rak3sh
 ```
 
-6.  **Total disk usage of all files and directories upto certain depth** print the total for a directory only if it is N or fewer levels below the command
+6.  **Total disk usage of all files and directories upto certain depth:** print the total for a directory only if it is N or fewer levels below the command
 
 ```cmd
 du  -ah --max-depth 2 /home/rak3sh
 ```
 
-7.  **Total disk usage with excluded files** To find out the total disk usage of files and directories, but excludes the files that matches given pattern.
+7.  **Total disk usage with excluded files:** To find out the total disk usage of files and directories, but excludes the files that matches given pattern.
 
 ```cmd
 du -ah --exclude="*.txt" /home/rak3sh
 ```
 
-8.  **Help** This command gives information about du
+8.  **Help:** This command gives information about du
 
 ```cmd
 du  --help
