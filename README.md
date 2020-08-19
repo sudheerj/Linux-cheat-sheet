@@ -194,6 +194,42 @@ whois google.com
 
 ### Installing packages
 
+1. **Install package:**
+
+```cmd
+yum install package_name
+```
+
+2. **Package description:**
+The info command is used to display brief details about a package.
+
+```cmd
+yum info package_name
+```
+
+3. **Uninstall package:**
+The remove command is used to remove or uninstall package name.
+```cmd
+yum remove package_name
+```
+4. **Install package from local file:**
+
+It is also possible to install package from local file named package_name.rpm.
+
+```cmd
+rpm -i package_name.rpm
+```
+
+5. **Install from source code:**
+
+```cmd
+tar zxvf sourcecode.tar.gz
+cd sourcecode
+./configure
+make
+make install
+```
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### Disk usage
