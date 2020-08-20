@@ -320,6 +320,105 @@ $ uname -o
 
 ### Search Files
 
+1. **Pattern search:**
+The `grep` command is used to search patterns in files.
+
+```cmd
+grep pattern files
+grep -i // Case sensitive
+grep -r // Recursive
+grep -v // Inverted search
+
+Example:
+grep "^hello" test.txt // Hello John
+grep -i "hELLo" text.txt // Hello John
+```
+
+2. **Find files and directories:**
+
+The `find` command is used to find or search files and directories by file name, folder name, creation date, modification date, owner and permissions etc and perform subsequent operations on them.
+
+i. **Search file with name:**
+
+```cmd
+find ./directory_name -name file_name
+
+Example:
+find ./test -name test.txt // ./test/test.txt
+```
+
+ii. **Search file with pattern:**
+
+```cmd
+find ./directory_name -name file_pattern
+
+Example:
+find ./test -name *.txt // ./test/test.txt
+```
+
+iii. **Search file with executable action:**
+
+```cmd
+find ./directory_name -name file_name -exec command
+
+Example:
+find ./test -name test.txt -exec rm -i {} \; // Search file and delete it after confirmation
+```
+
+iv. **Search for empty files or directories:**
+
+The find command is used to search all empty folders and files in the entered directory or sub-directories.
+
+```cmd
+find ./directory_name -empty
+
+Example:
+find ./test -empty
+//./test/test1
+//./test/test2
+//./test/test1.txt
+```
+
+v. **Search for files with permissions:**
+
+The find command is used to find all the files in the mentioned directory or sub-directory with the given permissions
+
+```cmd
+find ./directory_name -perm permission_code
+
+Example:
+find ./test -perm 664
+```
+
+vi. **Search text within multiple files:**
+
+```cmd
+find ./ -type f -name file_pattern -exec grep some_text  {} \;
+
+Example:
+find ./ -type f -name "*.txt" -exec grep 'World'  {} \; // Hello World
+```
+
+3. **Whereis to locate binary or source files for a command:**
+The whereis command in Linux is used to locate the binary, source, and manual page files for a command. i.e, It is used to It is used to find executables of a program, its man pages and configuration files.
+
+```cmd
+whereis command_name
+
+Example:
+whereis netstat //netstat:  /bin/netstat /usr/share/man/man8/netstat.8.gz(i.e, executable and location of its man page)
+```
+
+4. **Locate to find files:**
+The locate command is used to find the files by name. This command is faster compared to find command because it searches database for the filename instead of searching your filesystem.
+
+```cmd
+locate [OPTION] PATTERN
+
+Example:
+locate "*.txt" -n 10 // 10 file search results ending with .txt extension
+```
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### SSH
