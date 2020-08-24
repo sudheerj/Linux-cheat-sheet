@@ -147,6 +147,72 @@
    **[⬆ Back to Top](#table-of-contents)**
 
 ### File permissions
+Since Linux is a multi-user operating system, it is necessary to provide security to prevent people from accessing each other’s confidential files.
+
+So Linux divides authorization into 2 levels,
+
+1. **Ownership:**
+Each file or directory has assigned with 3 types of owners
+i. **User:** Owner of the file who created it.
+ii. **Group:** Group of users with the same access permissions to the file or directory.
+iii. **Other:** Applies to all other users on the system
+
+2. **Permissions:**
+Each file or directory has following permissions for the above 3 types of owners.
+
+    i.   **Read:** Give you the authority to open and read a file and lists its content for a directory.
+
+    ii.  **Write:** Give you the authority to modify the contents of a file and add, remove and rename files stored in the directory.
+
+    iii. **Execute:** Give you the authority to run the program in Unix/Linux.
+
+     The permissions are indicated with below characters,
+
+         r = read permission
+
+         w = write permission
+
+         x = execute permission
+
+         \- = no permission
+
+    The above authorization levels represented in a diagram
+
+<img src="https://github.com/sudheerj/Linux-cheat-sheet/blob/master/images/permissions.png" width="600" height="400">
+
+There is a need to restrict own file/directory access to others.
+
+**Change access:**
+The `chmod` command is used to change the access mode of a file.  This command is used to set permissions (read, write, execute) on a file/directory for the owner, group and the others group.
+
+```cmd
+chmod [reference][operator][mode] file...
+
+Example
+chmod ugo-rwx test.txt
+```
+
+**Changing Ownership and Group:**
+It is possible to change the the ownership and group of a file/directory using `chown` command.
+
+```cmd
+chown user filename
+chown user:group filename
+
+Example:
+chown John test.txt
+chown John:Admin test.txt
+```
+
+**Change group-owner only:**
+Sometimes you may need to change group owner only. In this case, chgrp command need to be used
+
+```cmd
+chgrp group_name filename
+
+Example:
+sudo chgrp Administrator test.txt
+```
 
 **[⬆ Back to Top](#table-of-contents)**
 
