@@ -21,26 +21,52 @@
 
 ### User Information
 
-1. **who** It is used to get information about currently logged in user on to system
+1. **who** It is used to get information about currently logged in user on to system. If you don't provide any option or arguments, the command displays the following information for each logged-in user.
+
+    1. Login name of the user
+    2. User terminal
+    3. Date & Time of login
+    4. Remote host name of the user
 
    ```bash
    $ who
    sudheer :0 2019-08-04 01:21 (:0)
    ```
 
-   1. **whoami:** It display the system’s username
+2 **whoami:** It display the system’s username
 
    ```bash
    $ whoami
    sudheer
    ```
 
-   2. **id:** It display the user identification information
+3. **id:** It display the user identification(the real and effective user and group IDs) information
 
    ```bash
    $ id
-
+   uid=1000(sj) gid=1000(sj) groups=1000(sj),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),120(lpadmin),131(lxd),132(sambashare)
    ```
+4. **groups:** This command is used to display all the groups for which the user belongs to.
+
+   ```bash
+   $ group
+   sj: sj, adm, cdrom, sudo, dip, plugdev, lpadmin, lxd, sambashare
+   ```
+
+5. **finger:**  Used to check the information of any currently logged in users. i.e, It displays users login time, tty (name), idle time, home directory, shell name etc.
+
+   ```bash
+   $ finger
+   Login     Name       Tty      Idle  Login Time   Office     Office Phone
+   sj        sj        *:0             Aug 28 01:27 (:0)
+   ```
+
+   This may not be available by default in many linux machines. In this case, you need to install it manually.
+
+   ```bash
+   $ sudo apt install finger
+   ```
+
 
    **[⬆ Back to Top](#table-of-contents)**
 
@@ -191,6 +217,50 @@ chmod [reference][operator][mode] file...
 Example
 chmod ugo-rwx test.txt
 ```
+
+There are 2 ways to use this command,
+
+1. **Absolute mode:**
+The file permissions will be represented in a three-digit octal number.
+
+The possible permissions types represented in a number format as below.
+
+     | Permission Type | Number |  Symbol     |
+     | ------------- | ----- | ----- |
+     | No Permission | 0 | --- |
+     | Execute | 1 | --x |
+     | Write | 2 | -w- |
+     | Execute + Write | 3 | -wx |
+     | Read | 4 | r-- |
+     | Read + Execute | 5 | r-x |
+     | Read + Write | 6 | rw- |
+     | Read + Write + Execute | 7 | rwx |
+
+Let's update the permissions in absolute mode with an example as below,
+
+```cmd
+chmode 764 test.txt
+```
+
+2. **Symbolic mode:**
+In the symbolic mode, you can modify permissions of a specific owner unlike absolute mode.
+
+The owners are represented as below,
+
+     | Owner | Description |
+     | ------------- | ----- |
+     | u | user/owner |
+     | g | group |
+     | o | other |
+     | a | all |
+
+and the list of mathematical symbols to modify the file permissions as follows,
+
+     | Operator | Description |
+     | ------------- | ----- |
+     | + | Adds permission |
+     | - | Removes the permission |
+     | = | Assign the permission |
 
 **Changing Ownership and Group:**
 It is possible to change the the ownership and group of a file/directory using `chown` command.
