@@ -66,7 +66,67 @@
    ```bash
    $ sudo apt install finger
    ```
+6. **users:** Displays usernames of all users currently logged on the system.
 
+   ```bash
+   $ users
+   sj
+   ```
+
+7. **grep:** It  is a powerful pattern searching tool to find information about a specific user from the system accounts file: /etc/passwd.
+
+       ```cmd
+       $ grep -i sj /etc/passwd
+       sj:x:1000:1000:sj,,,:/home/sj:/bin/bash
+       ```
+
+8. **W Command:** It(W) is a command-line utility that displays information about currently logged in users and what each user is doing.
+
+    ```bash
+    w [OPTIONS] [USER]
+
+    Example:
+    w
+     18:45:04 up  2:09,  1 user,  load average: 0.09, 0.07, 0.02
+    USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+    sj       :0       :0               01:27   ?xdm?   1:14   0.01s /usr/lib/gdm3/g
+    ```
+
+9. **last or lastb:** Displays a list of last logged in users on the system. You can pass user names to display their login and hostname details.
+
+    ```bash
+    last [options] [username...] [tty...]
+
+    Example:
+
+    last
+    sj       :0           :0               Fri Aug 28 01:27    gone - no logout
+    reboot   system boot  5.4.0-29-generic Fri Aug 28 01:27   still running
+    sj       :0           :0               Wed Jul 29 11:46 - crash (29+13:40)
+    reboot   system boot  5.4.0-29-generic Wed Jul 29 11:45   still running
+    sj       :0           :0               Thu May 14 21:04 - crash (75+14:41)
+    reboot   system boot  5.4.0-29-generic Thu May 14 21:03   still running
+
+    wtmp begins Thu May 14 21:03:56 2020
+    ```
+
+10. **lastlog:** The `lastlog` command is used to find the details of a recent login of all users or of a given user.
+
+    ```cmd
+    $ lastlog
+
+    Username         Port     From             Latest
+    root                                       **Never logged in**
+    daemon                                     **Never logged in**
+    bin                                        **Never logged in**
+    sys                                        **Never logged in**
+    sync                                       **Never logged in**
+    games                                      **Never logged in**
+    man                                        **Never logged in**
+    lp                                         **Never logged in**
+    mail                                       **Never logged in**
+    news                                       **Never logged in**
+    ```
 
    **[⬆ Back to Top](#table-of-contents)**
 
