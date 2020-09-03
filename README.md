@@ -33,7 +33,7 @@
    sudheer :0 2019-08-04 01:21 (:0)
    ```
 
-2 **whoami:** It display the system’s username
+2. **whoami:** It display the system’s username
 
    ```bash
    $ whoami
@@ -197,44 +197,45 @@
    rm -rf myDir
    ```
 5. **touch**: The touch command is is used to create, change and modify timestamps of a file without any content.
-   1. Create a new file: You can create a single file at a time using touch command. The file created is an empty file.
-   ```bash
-   touch file_name
-   ```
-   2. Create multiple files: You can create the multiple numbers of files at the same time.
-   ```bash
-   touch file1_name file2_name file3_name
-   ```
-   3. Change access time: The touch command with `a` option is used to change the access time of a file.
-   ```bash
-   touch -a file_name
-   ```
-   4. Change modification time: The touch command with `m` option is used to change the modified time.
-   ```bash
-   touch -m file_name
-   ```
-   5. Use timestamp of other file: The touch command with `r` option is used to get timestamp of another file.
-   ```bash
-   touch -r file2 file1
-   ```
-   In the above example, we get the timestamp of file1 for file2.
-   6. Create file with Specific time: The touch command with 't' option is used to create a file with specified time.
-   ```bash
-   touch -t 1911010000 file_name
-   ```
+   1. **Create a new file:** You can create a single file at a time using touch command. The file created is an empty file.
+       ```bash
+       touch file_name
+       ```
+   2. **Create multiple files:** You can create the multiple numbers of files at the same time.
+       ```bash
+       touch file1_name file2_name file3_name
+       ```
+   3. **Change access time:** The touch command with `a` option is used to change the access time of a file.
+       ```bash
+       touch -a file_name
+       ```
+   4. **Change modification time:** The touch command with `m` option is used to change the modified time.
+       ```bash
+       touch -m file_name
+       ```
+   5. **Use timestamp of other file:** The touch command with `r` option is used to get timestamp of another file.
+       ```bash
+       touch -r file2 file1
+       ```
+
+       In the above example, we get the timestamp of file1 for file2.
+
+   6. **Create file with Specific time:** The touch command with 't' option is used to create a file with specified time.
+       ```bash
+       touch -t 1911010000 file_name
+       ```
 6. **cat**: The cat command is used to create single or multiple files, view contain of file, concatenate files and redirect output in terminal or files.
 
-   1. View file contents: You can view contents of a single or more files by mentioning the filenames.
+   1. **View file contents:** You can view contents of a single or more files by mentioning the filenames.
 
-   ```bash
-   cat file_name1 file_name2
-   ```
+       ```bash
+       cat file_name1 file_name2
+       ```
 
-   **[⬆ Back to Top](#table-of-contents)**
+**[⬆ Back to Top](#table-of-contents)**
 
 ### File permissions
 Since Linux is a multi-user operating system, it is necessary to provide security to prevent people from accessing each other’s confidential files.
-
 So Linux divides authorization into 2 levels,
 
 1. **Ownership:**
@@ -283,9 +284,9 @@ There are 2 ways to use this command,
 1. **Absolute mode:**
 The file permissions will be represented in a three-digit octal number.
 
-The possible permissions types represented in a number format as below.
+     The possible permissions types represented in a number format as below.
 
-     | Permission Type | Number |  Symbol     |
+     | Permission Type | Number |  Symbol |
      | ------------- | ----- | ----- |
      | No Permission | 0 | --- |
      | Execute | 1 | --x |
@@ -296,25 +297,26 @@ The possible permissions types represented in a number format as below.
      | Read + Write | 6 | rw- |
      | Read + Write + Execute | 7 | rwx |
 
+
 Let's update the permissions in absolute mode with an example as below,
 
-```cmd
-chmode 764 test.txt
-```
+   ```cmd
+    chmode 764 test.txt
+   ```
 
 2. **Symbolic mode:**
 In the symbolic mode, you can modify permissions of a specific owner unlike absolute mode.
 
-The owners are represented as below,
+    The owners are represented as below,
 
      | Owner | Description |
-     | ------------- | ----- |
+     | ----- | ----- |
      | u | user/owner |
      | g | group |
      | o | other |
      | a | all |
 
-and the list of mathematical symbols to modify the file permissions as follows,
+    and the list of mathematical symbols to modify the file permissions as follows,
 
      | Operator | Description |
      | ------------- | ----- |
@@ -356,35 +358,35 @@ ifconfig -a
 
 2.  **Test connection to a remote machine:** Send an echo request to test connection of a remote machine.
 
-```cmd
-ping <ip-address> or hostname
+    ```cmd
+    ping <ip-address> or hostname
 
-Example:
-ping 10.0.0.11
-```
+    Example:
+    ping 10.0.0.11
+    ```
 
 3.  **Show IP Address:** Display ip address of a currennt machine
 
-```cmd
-hostname -I
-(OR)
-ip addr show
-```
+    ```cmd
+    hostname -I
+    (OR)
+    ip addr show
+    ```
 
 4.  **Active ports:** Shows active or listening ports
 
-```cmd
-netstat -pnltu
-```
+     ```cmd
+     netstat -pnltu
+     ```
 
 5.  **Find information about domain:** `whois` command is used to find out information about a domain, such as the owner of the domain, the owner’s contact information, and the nameservers used by domain.
 
-```cmd
-whois [domain]
+    ```cmd
+    whois [domain]
 
-Example:
-whois google.com
-```
+    Example:
+    whois google.com
+    ```
 
 **[⬆ Back to Top](#table-of-contents)**
 
