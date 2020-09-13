@@ -814,6 +814,94 @@ O    # open a line above the current cursor position
 ##### Deleting Text
 
 ##### Cut, Copy & Paste
+      Copy, Cut and Paste operations can be done in either Normal or visual Mode.
+
+1. **Normal mode:** This mode appears on click of `Esc` key.
+
+   **Copy** There are various copy or yank commands based on amount of text to be copied. The `y` character is used to perform this operation.
+
+   i. Copy an entire line: Just place the cursor at the beginning of the line and type `yy`
+
+   ```cmd
+   yy
+   ```
+
+   ii.Copy three lines: Just place the cursor from where to start copying and type `3yy`
+
+   ```cmd
+   3yy
+   ```
+
+   iii. Copy word with trailing whitespace: Place the cursor at the beginning of the word and type `yaw`
+
+   ```cmd
+   yaw
+   ```
+
+   iv. Copy word without trailing whitespace: Place the cursor at the beginning of the word and type `yiw`.
+
+   ```cmd
+   yiw
+   ```
+
+   v. Copy right of the cursor: Copy text right of the cursor to the end of line using `y$` command
+
+   ```cmd
+   y$
+   ```
+
+   vi.Copy left of the cursor: Copy text left of the cursor to the end of line using `y^` command
+
+   ```cmd
+   y^
+   ```
+
+   vii. Copy text between the cursor and character: Copy text between the cursor and specified character.
+
+   ```cmd
+   ytx(Copy until x and x is excluded)
+   yfx(Copy until x and x is included)
+   ```
+
+   **Cut** There are various cutting or deleting commands based on amount of text to be deleted. The `d` character is used to perform this operation.
+
+   i. Cut entire line: Cut the entire line where the cursor is located
+
+   ```cmd
+   dd
+   ```
+
+   ii.Cut three lines: Cut the three lines starting from the place where cursor is located
+
+   ```cmd
+   3dd
+   ```
+
+   iii.Cut right of the cursor: Cut the text from the right of the cursor till the end of line
+
+   ```cmd
+   d$
+   ```
+
+   iii.Cut left of the cursor: Cut the text from the left of the cursor till the beginning of line
+
+   ```cmd
+   d^
+   ```
+
+   **Paste** This operation is performed using `p` command to paste the selected text
+
+   ```cmd
+   p
+   ```
+
+2. **Visual Mode** In this mode, first select the text using below keys
+
+    1. v (lowercase): To select individual characters
+    2. V (uppercase): To select the entire line
+    3. Ctrl+v: To select by block
+
+    and perform copy, cut and paste operations using y,d and p commands
 
 ##### Exiting
 
