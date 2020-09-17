@@ -811,10 +811,46 @@ O    # open a line above the current cursor position
 
 ##### Editing Text
 
+1. **Change word:** Change word/part of word to right of cursor
+
+    ```cmd
+    cw
+    ```
+
+2. **Change line** Change entire line
+
+    ```cmd
+    cc
+    ```
+
+3. **Change line from specific character** Change from cursor to end of line
+
+    ```cmd
+    C
+    ```
+
 ##### Deleting Text
 
+1. **Deleting One Character:** Position the cursor over the character to be deleted and type x
+
+    ```cmd
+    x
+    X       //To delete one character before the cursor
+    ```
+2. **Deleting a Word:** Position the cursor at the beginning of the word and type dw
+
+    ```cmd
+    dw
+    ```
+3. **Deleting a Line:** Position the cursor anywhere on the line and type dd.
+
+    ```cmd
+    dd
+    ```
+
 ##### Cut, Copy & Paste
-      Copy, Cut and Paste operations can be done in either Normal or visual Mode.
+
+   Copy, Cut and Paste operations can be done in either Normal or visual Mode.
 
 1. **Normal mode:** This mode appears on click of `Esc` key.
 
