@@ -75,10 +75,10 @@
 
 7. **grep:** It  is a powerful pattern searching tool to find information about a specific user from the system accounts file: /etc/passwd.
 
-       ```cmd
-       $ grep -i sj /etc/passwd
-       sj:x:1000:1000:sj,,,:/home/sj:/bin/bash
-       ```
+    ```bash
+    $ grep -i sj /etc/passwd
+    sj:x:1000:1000:sj,,,:/home/sj:/bin/bash
+    ```
 
 8. **W Command:** It(W) is a command-line utility that displays information about currently logged in users and what each user is doing.
 
