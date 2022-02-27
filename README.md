@@ -137,7 +137,44 @@
    $ pwd
    /home/sj/Desktop/Linux
    ```
-2. **mkdir** The mkdir(make directory) command allows users to create directories or folders.
+
+2. **ls**: The `ls` command is used to list files or directories. It also accepts some flags or options that changes how files or directories are listed in your terminal.
+
+    ```bash
+     Syntax:
+     ls [flags] [directory]
+
+     Example:
+     $ ls
+     bin dev lib libx32 mnt  
+
+     //Listing files & directories with time in a rever order
+     $ ls -ltr
+     drwxr-xr-x 2 sj sj 4096 May 14  2020 Videos
+     drwxr-xr-x 2 sj sj 4096 May 14  2020 Templates
+     drwxr-xr-x 2 sj sj 4096 May 14  2020 Public
+
+     //Home directory
+     $ ls ~
+     Desktop    Downloads  Pictures  Sudheer    test   test.txt
+     Documents  Music      Public    Templates  test1  Videos
+    ```
+
+    Below are the list of possible options for `ls` command,
+
+    ```cmd
+    -a Show all (including hidden)
+    -R Recursive list
+    -r Reverse order
+    -t Sort by last modified
+    -S Sort by file size
+    -l Long listing format
+    -1 One file per line
+    -m Comma-­sep­arated output
+    -Q Quoted output
+    ```
+
+3. **mkdir** The mkdir(make directory) command allows users to create directories or folders.
 
    ```bash
    $ mkdir ubuntu
@@ -153,7 +190,7 @@
    ~/Desktop/Linux/dir1/dir2/dir3$
    ```
 
-3. **rmdir**: The rmdir(remove directories) is used to remove _empty_ directories. Can be used to delete multiple empty directories as well. Safer to use compared to `rm -r FolderName`. This command can also be forced to delete non-empty directories.
+4. **rmdir**: The rmdir(remove directories) is used to remove _empty_ directories. Can be used to delete multiple empty directories as well. Safer to use compared to `rm -r FolderName`. This command can also be forced to delete non-empty directories.
 
    1. Remove empty directory:
 
@@ -179,7 +216,7 @@
    rmdir -p a/b/c
    ```
 
-4. **rm**: The rm(remove) command is used to remove objects such as files, directories, symbolic links etc from the file system.
+5. **rm**: The rm(remove) command is used to remove objects such as files, directories, symbolic links etc from the file system.
    1. Remove file: The rm command is used to remove or delete a file
    ```bash
    rm file_name
@@ -196,7 +233,7 @@
    ```bash
    rm -rf myDir
    ```
-5. **touch**: The touch command is is used to create, change and modify timestamps of a file without any content.
+6. **touch**: The touch command is is used to create, change and modify timestamps of a file without any content.
    1. **Create a new file:** You can create a single file at a time using touch command. The file created is an empty file.
        ```bash
        touch file_name
@@ -224,12 +261,25 @@
        ```bash
        touch -t 1911010000 file_name
        ```
-6. **cat**: The cat command is used to create single or multiple files, view contain of file, concatenate files and redirect output in terminal or files.
-
-   1. **View file contents:** You can view contents of a single or more files by mentioning the filenames.
+7. **cat**: The cat command is used to create single or multiple files, view contain of file, concatenate files and redirect output in terminal or files.
+     ```bash
+     $ cat [OPTION] [FILE]...
+     ```
+   1. **Create a file:** Used to create a file with specific name, content and press exit using `CTRL + D`
+       ```bash
+       cat > file_name1.txt
+       Hello, How are you?
+       ```
+   2. **View file contents:** You can view contents of a single or more files by mentioning the filenames.
 
        ```bash
        cat file_name1 file_name2
+       ```
+   3. **More & Less options:** If a file having a large number of content that won’t fit in the output terminal then `more` & `less` options can be used to indiate additional content.
+
+       ```bash
+       cat file_name1.txt | more
+       cat file_name1.txt | less
        ```
 
 **[⬆ Back to Top](#table-of-contents)**
