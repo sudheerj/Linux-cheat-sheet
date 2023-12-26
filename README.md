@@ -18,6 +18,10 @@
 | 8   | [**Search Files**](#search-files)                                       |
 | 9   | [**SSH**](#ssh)                                                         |
 | 10  | [**Vi/Vim-commands**](#vi/vim-commands)                                 |
+| 11  | [**Top/TaskManager Command**](#Top-Command)                             |
+| 12  | [**Kill Command**](#Kill-Command)                                       |
+| 13  | [**History Command**](#History-Command)                                 |
+| 14  | [**Curl Command**](#Curl-Command)                                       |
 
 ### User Information
 
@@ -999,5 +1003,222 @@ O    # open a line above the current cursor position
     :q	    # Quit, but it fails if anything has changed
     :q!	    # Quit and throw away for any changes
     ```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+
+### Top/TaskManager Command
+
+top: The `top` command provides dynamic real-time viewing of the running system. It can display system summary information as well as a list of tasks currently being managed by the Linux kernel.
+
+#### options
+| Option | Description                              |
+|--------|------------------------------------------|
+| -b     | Batch mode                               |
+| -n     | Number of iterations                     |
+| -s     | Sec delay between updates                |
+| -d     | Delay time in seconds                    |
+| -p     | Monitor process ID                       |
+
+```cmd
+top [options]
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### Kill Command
+kill: The kill command sends a signal to a process. Useful when trying to terminate a hung process.
+
+**options:**
+| Option | Description                                   |
+|--------|-----------------------------------------------|
+| -s     | Specify the signal to send (e.g., -s SIGTERM) |
+| -l     | List available signals                        |
+| -n     | Process group ID                              |
+| -signal| Specify the signal using signal name or number|
+| -p     | Specify the process ID to be signaled         |
+
+#### kill Command Options
+
+1. -s Option
+ Specifies the signal to send to the process. Use in the format -s SIGNAL. For example:
+
+```cmd
+kill -s SIGTERM <process_id>
+```
+
+2. -l Option
+Lists available signals that can be used with the kill command. This option does not send any signal; it only displays a list of signals.
+
+```cmd
+kill -l
+```
+3. -n Option
+Specifies the process group ID. This option allows you to send a signal to a process group rather than an individual process.
+
+```cmd
+kill -n <process_group_id>
+```
+4. -signal Option
+Specifies the signal to send using either the signal name or number directly.
+
+```cmd
+kill -TERM <process_id>
+```
+5. -p Option
+Specifies the process ID to be signaled. Use in the format -p <process_id>.
+
+```cmd
+kill -p <process_id>
+```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### History Command Options
+The history command shows a list of previously issued commands.
+
+#### history Command Options
+| Option         | Description                                                 |
+|----------------|-------------------------------------------------------------|
+| `-c`           | Clears the entire command history.                          |
+| `-d offset`    | Deletes the history entry at the specified offset.          |
+| `-a`           | Appends the current session's history to the history file.  |
+| `-r`           | Reads the history file and appends entries to the session.  |
+| `-n`           | Prevents command numbers from being displayed.              |
+| `-w`           | Writes the current session's history to the history file.   |
+| `-s "<command>"| Appends the specified entry to the end of the history list. |
+| `-p offset`    | Prints the history entry at the specified offset.           |
+| `-f file`      | Reads history entries from the specified file.              |
+
+1. -c Option
+Clears the entire command history.
+```cmd
+history -c
+```
+
+2. -d offset Option
+Deletes the history entry at the specified offset.
+
+```cmd
+history -d <offset>
+```
+
+3. -a Option
+Appends the current session's history to the history file.
+
+```cmd
+history -a
+```
+
+4. -r Option
+Reads the history file and appends the entries to the current session's history.
+
+```cmd
+history -r
+```
+
+5. -n Option
+Prevents command numbers from being displayed when using the history command.
+
+```cmd
+history -n
+```
+6. -w Option
+Writes the current session's history to the history file.
+
+```cmd
+history -w
+```
+
+7. -s Option
+Appends the specified entry to the end of the history list.
+
+```cmd
+history -s "<command>"
+```
+
+8. -p Option
+Prints the history entry at the specified offset.
+
+```cmd
+history -p <offset>
+```
+
+9. -f file Option
+Reads history entries from the specified file and appends them to the history list.
+
+```cmd
+history -f <file>
+```
+
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### Curl Command
+
+Curl: The curl command transfers data to or from a server. It supports dozens of protocols, including HTTP, HTTPS, FTP, SFTP, Telnet, DICT, LDAP, LDAPS, FILE, IMAP, SMTP, POP3, RTSP and RTMP.
+
+**Options**
+
+| Option                     | Description                                             |
+|----------------------------|---------------------------------------------------------|
+| `-X, --request <command>`  | Specify the HTTP request method (GET, POST, etc.).      |
+| `-H, --header <header>`    | Pass custom headers to the request.                     |
+| `--data <data>`            | HTTP POST data.                                         |
+| `--data-urlencode <data>`  | URL encode the POST data.                               |
+| `--form <name=content>`    | Specify multipart/form-data POST data.                  |
+| `-d, --data-raw <data>`    | Send data as-is without any encoding.                   |
+| `-i, --include`            | Include HTTP headers in the output.                     |
+| `--url <url>`              | Specify the URL to send the request to.                 |
+| `-o, --output <file>`      | Write output to a file instead of stdout.               |
+| `-O, --remote-name`        | Save the file with the same name as in the URL.         |
+| `-L, --location`           | Follow redirects.                                       |
+| `--user <user:password>`   | Specify the user and password for server authentication.|
+| `-u, --user-agent <agent>` | Set the user-agent string.                              |
+| `--cookie <data>`          | Send cookies from string/file.                          |
+| `--cookie-jar <file>`      | Save cookies to a file after receiving them.            |
+| `--compressed`             | Request compressed response.                            |
+| `-v, --verbose`            | Make the operation more talkative for debugging.        |
+| `-h, --help`               | Display help information.                               |
+
+1. Basic GET Request:
+Sends a simple GET request to the specified URL.
+
+```cmd
+curl http://example.com
+```
+
+2. Specify Request Method:
+Specifies a request method other than the default GET.
+
+```cmd
+curl -X POST http://example.com
+```
+3. Include Headers:
+
+Includes custom headers in the request.
+
+```cmd
+curl -H "Content-Type: application/json" http://example.com
+```
+4. Send POST Data:
+Sends data as POST request payload.
+
+```cmd
+curl -X POST --data "key1=value1&key2=value2" http://example.com
+```
+
+5. Save Output to File:
+Writes the output to a specified file.
+
+```cmd
+curl -o output.html http://example.com
+```
+6. Download File:
+Downloads a file and saves it with the same name as in the URL.
+
+```cmd
+curl -O http://example.com/file.zip
+```
 
 **[⬆ Back to Top](#table-of-contents)**
