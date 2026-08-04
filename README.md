@@ -1,7 +1,5 @@
 # Linux-cheat-sheet
 
-> Click :star:if you like the project. Pull Request are highly appreciated. Follow me [@SudheerJonna](https://twitter.com/SudheerJonna) for technical updates.
-
 ### Table of Contents
 
 ---
